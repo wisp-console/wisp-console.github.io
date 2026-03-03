@@ -7,34 +7,39 @@
       margin: 0;
       font-family: Arial, sans-serif;
       text-align: center;
-     background:
-  radial-gradient(circle at 20% 20%, #ffd6e8 0%, transparent 40%),
-  radial-gradient(circle at 80% 30%, #fff3b0 0%, transparent 40%),
-  radial-gradient(circle at 30% 80%, #d5fff5 0%, transparent 40%),
-  radial-gradient(circle at 70% 70%, #e8ffd9 0%, transparent 40%),
-  radial-gradient(circle at 50% 50%, #ffe5cc 0%, transparent 50%),
-  #ffffff;
+      background:
+        radial-gradient(circle at 20% 20%, #ffd6e8 0%, transparent 40%),
+        radial-gradient(circle at 80% 30%, #fff3b0 0%, transparent 40%),
+        radial-gradient(circle at 30% 80%, #d5fff5 0%, transparent 40%),
+        radial-gradient(circle at 70% 70%, #e8ffd9 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, #ffe5cc 0%, transparent 50%),
+        #ffffff;
     }
 
     header {
-      padding: 100px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
 
     h1 {
-  font-size: 100px;
-  font-weight: 800;
-  letter-spacing: 4px;
-  margin-bottom: 10px;
-}
+      font-size: 100px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
     }
 
     p {
       color: black;
       font-size: 18px;
+      margin-top: 0;
     }
 
     button {
-      margin-top: 20px;
+      margin-top: 25px;
       padding: 12px 30px;
       font-size: 16px;
       border: 2px solid black;
@@ -42,6 +47,7 @@
       color: black;
       border-radius: 30px;
       cursor: pointer;
+      transition: 0.3s;
     }
 
     button:hover {
@@ -51,7 +57,7 @@
 
     #infoSection {
       display: none;
-      margin: 60px auto;
+      margin: 80px auto;
       width: 85%;
       max-width: 700px;
     }
@@ -70,22 +76,25 @@
       border-bottom: 1px solid black;
       padding-bottom: 8px;
     }
-
   </style>
 </head>
+
 <body>
 
 <header>
   <h1>Wisp</h1>
-  <p>Inspired by You. Designed Around You</p>
+  <p>Inspired by You. Designed Around You.</p>
   <button onclick="showInfo()">Explore</button>
 </header>
 
 <div id="infoSection">
   <div class="info-box">
     <h2>About</h2>
-    <p>Wisp is a creative brand built around people.
-We design with intention, blending color, clarity, and purpose to create meaningful experiences.</p>
+    <p>
+      Wisp is a creative brand built around people.
+      We design with intention, blending color, clarity,
+      and purpose to create meaningful experiences.
+    </p>
 
     <h2>Contact</h2>
     <p>Email: example@email.com</p>
@@ -100,10 +109,3 @@ We design with intention, blending color, clarity, and purpose to create meaning
 
 </body>
 </html>
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} 
