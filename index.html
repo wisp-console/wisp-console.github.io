@@ -6,33 +6,65 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #667eea, #764ba2);
       text-align: center;
-      color: white;
+      background: linear-gradient(
+        135deg,
+        #ffb6c1,
+        #ffe066,
+        #a0ffe6,
+        #baffc9,
+        #ff9a3c
+      );
     }
 
     header {
-      padding: 80px 20px;
+      padding: 100px 20px;
     }
 
     h1 {
-      font-size: 50px;
+      font-size: 55px;
+      color: black;
+    }
+
+    p {
+      color: black;
+      font-size: 18px;
     }
 
     button {
       margin-top: 20px;
-      padding: 12px 25px;
+      padding: 12px 30px;
       font-size: 16px;
-      border: none;
-      background: linear-gradient(to right, #141e30, #243b55);
-      border-radius: 20px;
+      border: 2px solid black;
+      background: white;
+      color: black;
+      border-radius: 30px;
       cursor: pointer;
     }
 
-    #info {
-      margin-top: 40px;
+    button:hover {
+      background: black;
+      color: white;
+    }
+
+    #infoSection {
       display: none;
-      font-size: 18px;
+      margin: 50px auto;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .info-box {
+      background: white;
+      border: 2px solid black;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      color: black;
+    }
+
+    .info-box h2 {
+      margin-top: 0;
     }
   </style>
 </head>
@@ -40,18 +72,25 @@
 
 <header>
   <h1>Wisp</h1>
-  <p>Welcome to my brand website.</p>
+  <p>Creative Brand Experience</p>
   <button onclick="showInfo()">Explore</button>
-
-  <div id="info">
-    <p>This is the information section.</p>
-    <p>Wisp is a creative brand focused on innovation and design.</p>
-  </div>
 </header>
+
+<div id="infoSection">
+  <div class="info-box">
+    <h2>About</h2>
+    <p>This is where your information will go.</p>
+  </div>
+
+  <div class="info-box">
+    <h2>Contact</h2>
+    <p>Email: example@email.com</p>
+  </div>
+</div>
 
 <script>
   function showInfo() {
-    document.getElementById("info").style.display = "block";
+    document.getElementById("infoSection").style.display = "block";
   }
 </script>
 
