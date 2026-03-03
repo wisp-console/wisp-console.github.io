@@ -22,7 +22,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 20px;
     }
 
     h1 {
@@ -54,10 +53,19 @@
       color: white;
     }
 
+    /* 👇 처음에는 숨겨짐 */
     #infoSection {
+      display: none;
       margin: 100px auto;
       width: 85%;
-      max-width: 700px;
+      max-width: 900px;
+    }
+
+    /* 👇 4개 박스를 2x2로 정렬 */
+    .box-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
     }
 
     .info-box {
@@ -67,18 +75,18 @@
       border-radius: 25px;
       color: black;
       text-align: left;
-      margin-bottom: 50px;
+      transition: 0.4s;
     }
 
     .info-box h2 {
       margin-top: 0;
       border-bottom: 1px solid black;
       padding-bottom: 10px;
-      font-size: 22px;
+      font-size: 20px;
     }
 
     .info-box p {
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.6;
     }
 
@@ -90,49 +98,52 @@
 <header>
   <h1>Wisp</h1>
   <p class="tagline">Inspired by You. Designed Around You.</p>
-  <button onclick="scrollToInfo()">Explore</button>
+  <button onclick="showInfo()">Explore</button>
 </header>
 
 <div id="infoSection">
 
-  <div class="info-box">
-    <h2>About</h2>
-    <p>
-      Wisp is a creative brand built around people.
-      We design with intention and clarity to create
-      meaningful and thoughtful experiences.
-    </p>
-  </div>
+  <div class="box-container">
 
-  <div class="info-box">
-    <h2>Core Value</h2>
-    <p>
-      • Creativity with purpose<br>
-      • Simplicity with meaning<br>
-      • Design centered on people<br>
-      • Thoughtful and intentional work
-    </p>
-  </div>
+    <div class="info-box">
+      <h2>About</h2>
+      <p>
+        Wisp is a creative brand built around people.
+        We design meaningful and thoughtful experiences.
+      </p>
+    </div>
 
-  <div class="info-box">
-    <h2>Services</h2>
-    <p>
-      Brand identity, web design, and digital experiences
-      tailored to your vision.
-    </p>
-  </div>
+    <div class="info-box">
+      <h2>Core Value</h2>
+      <p>
+        Creativity with purpose.<br>
+        Simplicity with meaning.<br>
+        Design centered on people.
+      </p>
+    </div>
 
-  <div class="info-box">
-    <h2>Contact</h2>
-    <p>
-      Email: example@email.com
-    </p>
+    <div class="info-box">
+      <h2>Services</h2>
+      <p>
+        Brand identity, web design,
+        and digital experiences.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h2>Contact</h2>
+      <p>
+        Email: example@email.com
+      </p>
+    </div>
+
   </div>
 
 </div>
 
 <script>
-  function scrollToInfo() {
+  function showInfo() {
+    document.getElementById("infoSection").style.display = "block";
     document.getElementById("infoSection").scrollIntoView({
       behavior: "smooth"
     });
